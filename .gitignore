@@ -1,0 +1,7 @@
+
+*.swp
+node_modules/
+.npm/
+build
+npm-debug.log
+picture.jpg
