@@ -12,3 +12,4 @@ Requirements:
 - Raspberry Pi camera module
 - Miflora Mqtt Daemon
 - NodeJs
+- PM2
