@@ -3,6 +3,7 @@ const fetch = require('node-fetch')
 const FormData = require('form-data')
 const mqtt = require('mqtt')
 const piCameraConnect = require('@zino-hofmann/pi-camera-connect')
+const Jimp = require('jimp')
 const { StillCamera } = piCameraConnect
 
 class Gateway {
@@ -61,7 +62,10 @@ class Gateway {
   }
 
   takePicture () {
-    return this.camera.takeImage().then(picture => fs.writeFileSync(this.picture, picture))
+    return this.camera.takeImage()
+      .then(picture => Jimp.read(picture))
+      .then(picture => picture.quality(70))
+      .then(picture => picture.writeAsync(this.picture))
   }
 }
 

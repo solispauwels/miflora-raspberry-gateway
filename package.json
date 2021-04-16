@@ -8,6 +8,7 @@
   "dependencies": {
     "@zino-hofmann/pi-camera-connect": "^1.2.0",
     "form-data": "^4.0.0",
+    "jimp": "^0.16.1",
     "mqtt": "^4.2.6",
     "node-fetch": "^2.6.1"
   }

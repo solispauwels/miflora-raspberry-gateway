@@ -13,3 +13,4 @@ Requirements:
 - Miflora Mqtt Daemon
 - NodeJs
 - PM2
+- Backend API
