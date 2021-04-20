@@ -64,6 +64,7 @@ class Gateway {
   takePicture () {
     return this.camera.takeImage()
       .then(picture => Jimp.read(picture))
+      .then(picture => picture.resize(1440, Jimp.AUTO))
       .then(picture => picture.quality(70))
       .then(picture => picture.writeAsync(this.picture))
   }
